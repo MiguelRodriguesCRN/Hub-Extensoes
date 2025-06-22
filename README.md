@@ -29,6 +29,8 @@ Este projeto é uma extensão de navegador que centraliza ferramentas úteis em 
 ├── style.css                # Estilização central (com responsividade e foco nas 3 seções)
 ├── js/
 │   ├── audio-recorder.js    # Classe e lógica do gravador de áudio
-│   ├── extensao2.js         # Lógica dos atalhos e calculadora
+│   ├── atalhos.js         # Lógica dos atalhos
+│   ├── calculator.js         # Lógica da calculadora de horas
+│   ├── nav.js         # Lógica de navegação entre as extensões
 ├── assets/                  # (opcional) Ícones ou recursos visuais
 └── README.md                # Este arquivo
