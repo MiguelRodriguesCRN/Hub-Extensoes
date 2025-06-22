@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HUB de Extensões</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Tela Inicial: Menu Principal -->
+  <div id="mainMenu">
+    <button id="btn-audio">Gravador de Áudio</button>
+    <button id="btn-shortcuts">Atalhos</button>
+    <button id="btn-calculator">Calculadora</button>
+    <button id="btn-coletores">Coletores</button>
+  </div>
+
+  <!-- Extensão 1: Gravador de Áudio -->
+  <div id="ext1" class="ext-content" style="display: none;">
+    <div class="audio-container">
+      <h2>Gravador de Áudio</h2>
+      <div id="status">Pronto para gravar</div>
+      <button id="recordButton" class="button">Iniciar Gravação</button>
+      <button id="stopButton" class="button stop" disabled>Parar Gravação</button>
+      <button id="playButton" class="button" disabled>Ouvir Gravação</button>
+
+      <div id="result" class="hidden">
+        <h3>Link do Áudio:</h3>
+        <a id="audioLink" target="_blank" rel="noopener noreferrer"></a>
+        <button id="copyButton" class="button small">Copiar Link</button>
+        <div id="expiryInfo"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Extensão 2: Atalhos -->
+  <div id="shortcutsSection" class="ext-content" style="display: none;">
+    <div class="container">
+      <h2>Atalhos</h2>
+      <!-- Subdivisão 1 -->
+      <div class="shortcut-category">
+        <button class="category-toggle">[Super Prático]</button>
+        <ul class="category-list" style="display: none;">
+          <li>
+            [Super Prático #UF] Análise de Aulas Práticas
+            <button class="copyButton" data-text="[Super Prático #UF] Análise de Aulas Práticas">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Análise de Processo Prático
+            <button class="copyButton" data-text="[Super Prático #UF] Análise de Processo Prático">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Alerta de Aula
+            <button class="copyButton" data-text="[Super Prático #UF] Alerta de Aula">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Reenvio de Aulas Práticas
+            <button class="copyButton" data-text="[Super Prático #UF] Reenvio de Aulas Práticas">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Análise de Aulas Práticas - Em análise CRT
+            <button class="copyButton"
+              data-text="[Super Prático #UF] Análise de Aulas Práticas - Em análise CRT">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Abertura de Aula Prática
+            <button class="copyButton" data-text="[Super Prático #UF] Abertura de Aula Prática">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Descarte de Aula Prática
+            <button class="copyButton" data-text="[Super Prático #UF] Descarte de Aula Prática">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Descarte e Análise de Aulas Práticas
+            <button class="copyButton"
+              data-text="[Super Prático #UF] Descarte e Análise de Aulas Práticas">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Encerramento de Aula Prática
+            <button class="copyButton" data-text="[Super Prático #UF] Encerramento de Aula Prática">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Aula Prática em Execução
+            <button class="copyButton" data-text="[Super Prático #UF] Aula Prática em Execução">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Cancelamento de Aulas Práticas chat
+            <button class="copyButton"
+              data-text="[Super Prático #UF] Cancelamento de Aulas Práticas chat">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Emissão de Certificado
+            <button class="copyButton" data-text="[Super Prático #UF] Emissão de Certificado">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Solicitação de Reprocessamento de Aula Prática
+            <button class="copyButton"
+              data-text="[Super Prático #UF] Solicitação de Reprocessamento de Aula Prática">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Solicitação de Importação de Candidato
+            <button class="copyButton"
+              data-text="[Super Prático #UF] Solicitação de Importação de Candidato">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Solicitação Cancelamento de Boleto
+            <button class="copyButton"
+              data-text="[Super Prático #UF] Solicitação Cancelamento de Boleto">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Solicitação de Emissão de Boleto
+            <button class="copyButton" data-text="[Super Prático #UF] Solicitação de Emissão de Boleto">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Solicitação de Transferência de Créditos
+            <button class="copyButton"
+              data-text="[Super Prático #UF] Solicitação de Transferência de Créditos">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Solicitação de Reset Senha de Usuário
+            <button class="copyButton"
+              data-text="[Super Prático #UF] Solicitação de Reset Senha de Usuário">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Status do Boleto
+            <button class="copyButton" data-text="[Super Prático #UF] Status do Boleto">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Agendamento Prático
+            <button class="copyButton" data-text="[Super Prático #UF] Agendamento Prático">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Adição de aulas Bônus
+            <button class="copyButton" data-text="[Super Prático #UF] Adição de aulas Bônus">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Abertura de Aula Formulário.
+            <button class="copyButton" data-text="[Super Prático #UF] Abertura de Aula Formulário.">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Indisponibilidade Sistêmica
+            <button class="copyButton" data-text="[Super Prático #UF]  Indisponibilidade Sistêmica">Copiar</button>
+          </li>
+          <li>
+            [Super Prático #UF] Reenvio de Certificado Prático
+            <button class="copyButton" data-text="[Super Prático #UF] Reenvio de Certificado Prático">Copiar</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Subdivisão 2 -->
+      <div class="shortcut-category">
+        <button class="category-toggle">[Teórico Presencial]</button>
+        <ul class="category-list" style="display: none;">
+          <li>
+            [Teórico Presencial #UF] Serviço de Monitoramento
+            <button class="copyButton" data-text="[Teórico Presencial #UF] Serviço de Monitoramento">Copiar</button>
+          </li>
+          <li>
+            [Teórico Presencial #UF] Análise de Aulas Teóricas
+            <button class="copyButton" data-text="[Teórico Presencial #UF] Análise de Aulas Teóricas">Copiar</button>
+          </li>
+          <li>
+            [Teórico Presencial #UF] Módulo Validador Biométrico
+            <button class="copyButton" data-text="[Teórico Presencial #UF] Módulo Validador Biométrico">Copiar</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Subdivisão 3 -->
+      <div class="shortcut-category">
+        <button class="category-toggle">[SuperAula]</button>
+        <ul class="category-list" style="display: none;">
+          <li>
+            [SuperAula #UF] Análise de Aulas Teóricas
+            <button class="copyButton" data-text="[SuperAula #UF] Análise de Aulas Teóricas">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Análise de Processo Teórico
+            <button class="copyButton" data-text="[SuperAula #UF] Análise de Processo Teórico">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Análise de Turma Teórica
+            <button class="copyButton" data-text="[SuperAula #UF] Análise de Turma Teórica">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Agendamento
+            <button class="copyButton" data-text="[SuperAula #UF] Agendamento">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Abertura de Aula Teórica - Aluno
+            <button class="copyButton" data-text="[SuperAula #UF] Abertura de Aula Teórica - Aluno">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Abertura de Aula Teórica - Instrutor
+            <button class="copyButton" data-text="[SuperAula #UF] Abertura de Aula Teórica - Instrutor">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Encerramento de Aula Teórica - Aluno
+            <button class="copyButton" data-text="[SuperAula #UF] Encerramento de Aula Teórica - Aluno">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Encerramento de Aula Teórica - Instrutor
+            <button class="copyButton"
+              data-text="[SuperAula #UF] Encerramento de Aula Teórica - Instrutor">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Tela Preta - Transmissão Aluno
+            <button class="copyButton" data-text="[SuperAula #UF] Tela Preta - Transmissão Aluno">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Tela Preta - Transmissão Instrutor
+            <button class="copyButton" data-text="[SuperAula #UF] Tela Preta - Transmissão Instrutor">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Sem áudio e sem vídeo - Transmissão Instrutor
+            <button class="copyButton"
+              data-text="[SuperAula #UF] Sem áudio e sem vídeo - Transmissão Instrutor">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Execução de Aula - Transmissão Aluno
+            <button class="copyButton" data-text="[SuperAula #UF] Execução de Aula - Transmissão Aluno">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Execução de Aula - Transmissão Instrutor
+            <button class="copyButton"
+              data-text="[SuperAula #UF] Execução de Aula - Transmissão Instrutor">Copiar</button>
+          </li>
+          <li>
+            [SuperAula #UF] Importação Processo
+            <button class="copyButton" data-text="[SuperAula #UF] Importação Processo">Copiar</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Subdivisão 4 -->
+      <div class="shortcut-category">
+        <button class="category-toggle">[Exame Teórico]</button>
+        <ul class="category-list" style="display: none;">
+          <li>
+            [Exame Teórico #UF] Exame Teórico
+            <button class="copyButton" data-text="[Exame Teórico #UF] Exame Teórico">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Instalação
+            <button class="copyButton" data-text="[Exame Teórico #UF] Instalação">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Agendamento
+            <button class="copyButton" data-text="[Exame Teórico #UF] Agendamento">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Pagamento
+            <button class="copyButton" data-text="[Exame Teórico #UF] Pagamento">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Consulta de Resultados
+            <button class="copyButton" data-text="[Exame Teórico #UF] Consulta de Resultados">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Procedimentos
+            <button class="copyButton" data-text="[Exame Teórico #UF] Procedimentos">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Falha no Sistema
+            <button class="copyButton" data-text="[Exame Teórico #UF] Falha no Sistema">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Navegador Seguro
+            <button class="copyButton" data-text="[Exame Teórico #UF] Navegador Seguro">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Auditoria
+            <button class="copyButton" data-text="[Exame Teórico #UF] Auditoria">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Abertura de Exame
+            <button class="copyButton" data-text="[Exame Teórico #UF] Abertura de Exame">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Finalização de Exame
+            <button class="copyButton" data-text="[Exame Teórico #UF] Finalização de Exame">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Captura de Ambiente não Inicializada
+            <button class="copyButton"
+              data-text="[Exame Teórico #UF] Captura de Ambiente não Inicializada">Copiar</button>
+          </li>
+          <li>
+            [Exame Teórico #UF] Indisponibilidade Sistêmica
+            <button class="copyButton" data-text="[Exame Teórico #UF] Indisponibilidade Sistêmica">Copiar</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Subdivisão 5 -->
+      <div class="shortcut-category">
+        <button class="category-toggle">[Módulo Coletor]</button>
+        <ul class="category-list" style="display: none;">
+          <li>
+            [Módulo Coletor #estado] Atualização de Versão
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Atualização de Versão">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Instalação e Configuração
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Instalação e Configuração">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Abertura de Aula
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Abertura de Aula">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Execução de Aula
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Execução de Aula">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Encerramento de Aula
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Encerramento de Aula">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Troca de Placa
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Troca de Placa">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Solicitação de Equipamentos
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Solicitação de Equipamentos">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Coleta de Banco de Dados
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Coleta de Banco de Dados">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Transferência de Unidade
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Transferência de Unidade">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Sincronização
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Sincronização">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Falha na Comunicação
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Falha na Comunicação">Copiar</button>
+          </li>
+          <li>
+            [Módulo Instrutor #estado] Atualização de Versão
+            <button class="copyButton" data-text="[Módulo Instrutor #estado] Atualização de Versão">Copiar</button>
+          </li>
+          <li>
+            [Módulo Coletor #estado] Configuração
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Configuração">Copiar</button>
+          </li>
+          <li>
+            [Módulo Instrutor #estado] Instalação
+            <button class="copyButton" data-text="[Módulo Coletor #estado] Configuração">Copiar</button>
+          </li>
+          <li>
+            [Módulo Instrutor #estado] Limpar Dados
+            <button class="copyButton" data-text="[Módulo Instrutor #estado] Limpar Dados">Copiar</button>
+          </li>
+          <li>
+            [Módulo Instrutor #estado] Falha na Comunicação
+            <button class="copyButton" data-text="[Módulo Instrutor #estado] Falha na Comunicação">Copiar</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Subdivisão 6 -->
+      <div class="shortcut-category">
+        <button class="category-toggle">[Módulo Geral]</button>
+        <ul class="category-list" style="display: none;">
+          <li>
+            [Módulo Geral #UF] Dúvidas
+            <button class="copyButton" data-text="[Módulo Geral #UF] Dúvidas">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Painel de Usuário
+            <button class="copyButton" data-text="[Módulo Geral #UF] Painel de Usuário">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Integração Detran
+            <button class="copyButton" data-text="[Módulo Geral #UF] Integração Detran">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Treinamento
+            <button class="copyButton" data-text="[Módulo Geral #UF] Treinamento">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Candidato
+            <button class="copyButton" data-text="[Módulo Geral #UF] Candidato">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Comercial
+            <button class="copyButton" data-text="[Módulo Geral #UF] Comercial">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Financeiro
+            <button class="copyButton" data-text="[Módulo Geral #UF] Financeiro">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Chat sem Interação
+            <button class="copyButton" data-text="[Módulo Geral #UF] Chat sem Interação">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Ligação Muda
+            <button class="copyButton" data-text="[Módulo Geral #UF] Ligação Muda">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Ligação Perdida
+            <button class="copyButton" data-text="[Módulo Geral #UF] Ligação Perdida">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Queda de Ligação
+            <button class="copyButton" data-text="[Módulo Geral #UF] Queda de Ligação">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Integração Detran
+            <button class="copyButton" data-text="[Módulo Geral #UF] Integração Detran">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Verificação de Pagamento
+            <button class="copyButton" data-text="[Módulo Geral #UF] Verificação de Pagamento">Copiar</button>
+          </li>
+          <li>
+            [Módulo Geral #UF] Verificação do Ticket
+            <button class="copyButton" data-text="[Módulo Geral #UF] Verificação do Ticket">Copiar</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Subdivisão 7 -->
+      <div class="shortcut-category">
+        <button class="category-toggle">[iDS #PB]</button>
+        <ul class="category-list" style="display: none;">
+          <li>
+            [iDS #PB] Análise de Conflitos
+            <button class="copyButton" data-text="[iDS #PB] Análise de Conflitos">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Análise de Frequência Prática 4R
+            <button class="copyButton" data-text="[iDS #PB] Análise de Frequência Prática 4R">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Análise de Frequência Prática 2R
+            <button class="copyButton" data-text="[iDS #PB] Análise de Frequência Prática 2R">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Análise de Frequência Teórica
+            <button class="copyButton" data-text="[iDS #PB] Análise de Frequência Teórica">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Envio de Curso Prático 4R
+            <button class="copyButton" data-text="[iDS #PB] Envio de Curso Prático 4R">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Envio de Curso Prático 2R
+            <button class="copyButton" data-text="[iDS #PB] Envio de Curso Prático 2R">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Envio de Curso de Reciclagem
+            <button class="copyButton" data-text="[iDS #PB] Envio de Curso de Reciclagem">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Solicitação de Cancelamento de Matrícula
+            <button class="copyButton" data-text="[iDS #PB] Solicitação de Cancelamento de Matrícula">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Solicitação de Desbloqueio do Captura
+            <button class="copyButton" data-text="[iDS #PB] Solicitação de Desbloqueio do Captura">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Solicitação de Instalação dos Programas do iDS
+            <button class="copyButton"
+              data-text="[iDS #PB] Solicitação de Instalação dos Programas do iDS">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Solicitação de Instalação do ADMIN
+            <button class="copyButton" data-text="[iDS #PB] Solicitação de Instalação do ADMIN">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Solicitação de Instalação do Captura
+            <button class="copyButton" data-text="[iDS #PB] Solicitação de Instalação do Captura">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Solicitação de Instalação do Validador
+            <button class="copyButton" data-text="[iDS #PB] Solicitação de Instalação do Validador">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Solicitação de Instalação do BioServer
+            <button class="copyButton" data-text="[iDS #PB] Solicitação de Instalação do BioServer">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Solicitação de Importação da Biometria
+            <button class="copyButton" data-text="[iDS #PB] Solicitação de Importação da Biometria">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Solicitação de Atualização de Matrícula
+            <button class="copyButton" data-text="[iDS #PB] Solicitação de Atualização de Matrícula">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Erro nos Programas do iDS
+            <button class="copyButton" data-text="[iDS #PB] Erro nos Programas do iDS">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Erro no Admin
+            <button class="copyButton" data-text="[iDS #PB] Erro no Admin">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Erro no Captura
+            <button class="copyButton" data-text="[iDS #PB] Erro no Captura">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Erro no Validador
+            <button class="copyButton" data-text="[iDS #PB] Erro no Validador">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Erro no BioServer
+            <button class="copyButton" data-text="[iDS #PB] Erro no BioServer">Copiar</button>
+          </li>
+          <li>
+            [iDS #PB] Candidato sem Biometria do DETRAN
+            <button class="copyButton" data-text="[iDS #PB] Análise de Conflitos">Copiar</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Subdivisão 8 -->
+      <div class="shortcut-category">
+        <button class="category-toggle">[Onboarding Digital]</button>
+        <ul class="category-list" style="display: none;">
+          <li>
+            [Onboarding Digital #UF] Consulta
+            <button class="copyButton" data-text="[Onboarding Digital #UF] Consulta">Copiar</button>
+          </li>
+          [Onboarding Digital #UF] Consulta de situação
+          <button class="copyButton" data-text="[Onboarding Digital #UF] Consulta de situação">Copiar</button>
+          </li>
+          <li>
+            [Onboarding Digital #UF] Retificação de dados
+            <button class="copyButton" data-text="[Onboarding Digital #UF] Retificação de dados">Copiar</button>
+          </li>
+          <li>
+            [Onboarding Digital #UF] Abertura de serviço
+            <button class="copyButton" data-text="[Onboarding Digital #UF] Abertura de serviço">Copiar</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Subdivisão 3, 4, ..., 8 -->
+    <!-- ... todas as outras categorias inseridas aqui exatamente como você mandou ... -->
+  </div>
+
+  <!-- Extensão 3: Calculadora -->
+  <div id="calculatorSection" class="ext-content" style="display: none;">
+    <h2>Calculadora de Tempo de Aula</h2>
+    <label for="startTime">Hora de Início:</label>
+    <input type="time" id="startTime" required>
+    <label for="endTime">Hora de Fim:</label>
+    <input type="time" id="endTime" required>
+    <button class="button" id="calculateButton">Calcular Duração</button>
+    <p id="totalTime" style="margin-top: 20px; font-size: 16px;"></p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/audio-recorder.js" defer></script>
+  <script src="js/atalhos.js" defer></script>
+  <script src="js/calculator.js" defer></script>
+  <script src="js/nav.js" defer></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "HUB de Extensões",
+  "version": "1.0",
+  "description": "HUB com gravador de áudio e ferramentas de cálculo/atalhos.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Abrir HUB"
+  },
+  "permissions": [
+    "clipboardWrite"
+  ],
+  "host_permissions": [
+    "https://tmpfiles.org/*"
+  ]
+}
