@@ -8,9 +8,16 @@
     "default_title": "Abrir HUB"
   },
   "permissions": [
-    "clipboardWrite"
+    "clipboardWrite",
+    "downloads"
   ],
   "host_permissions": [
     "https://tmpfiles.org/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["binarios/MVP.exe"],
+      "matches": ["<all_urls>"]
+    }
   ]
 }
