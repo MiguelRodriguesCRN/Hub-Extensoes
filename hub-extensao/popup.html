@@ -18,7 +18,7 @@
   </div>
 
   <!-- Extensão 1: Gravador de Áudio -->
-  <div id="ext1" class="ext-content" style="display: none;">
+  <div id="ext1" class="ext-content hidden">
     <div class="audio-container">
       <h2>Gravador de Áudio</h2>
       <div id="status">Pronto para gravar</div>
@@ -33,10 +33,12 @@
         <div id="expiryInfo"></div>
       </div>
     </div>
+    <!-- Botão de voltar -->
+    <button class="btn-voltar button">Voltar ao Menu</button>
   </div>
 
   <!-- Extensão 2: Atalhos -->
-  <div id="shortcutsSection" class="ext-content" style="display: none;">
+  <div id="shortcutsSection" class="ext-content hidden">
     <div class="container">
       <h2>Atalhos</h2>
       <!-- Subdivisão 1 -->
@@ -546,21 +548,26 @@
           </li>
         </ul>
       </div>
+      <!-- Botão de voltar -->
+      <button class="btn-voltar button">Voltar ao Menu</button>
     </div>
-    <!-- Subdivisão 3, 4, ..., 8 -->
-    <!-- ... todas as outras categorias inseridas aqui exatamente como você mandou ... -->
   </div>
 
   <!-- Extensão 3: Calculadora -->
-  <div id="calculatorSection" class="ext-content" style="display: none;">
-    <h2>Calculadora de Tempo de Aula</h2>
-    <label for="startTime">Hora de Início:</label>
-    <input type="time" id="startTime" required>
-    <label for="endTime">Hora de Fim:</label>
-    <input type="time" id="endTime" required>
-    <button class="button" id="calculateButton">Calcular Duração</button>
-    <p id="totalTime" style="margin-top: 20px; font-size: 16px;"></p>
+  <div id="calculatorSection" class="ext-content hidden">
+    <div class="container">
+      <h2>Calculadora de Tempo de Aula</h2>
+      <label for="startTime">Hora de Início:</label>
+      <input type="time" id="startTime" required>
+      <label for="endTime">Hora de Fim:</label>
+      <input type="time" id="endTime" required>
+      <button class="button" id="calculateButton">Calcular Duração</button>
+      <p id="totalTime" style="margin-top: 20px; font-size: 16px;"></p>
+      <!-- Botão de voltar -->
+      <button class="btn-voltar button">Voltar ao Menu</button>
+    </div>
   </div>
+
 
   <!-- Scripts -->
   <script src="js/audio-recorder.js" defer></script>

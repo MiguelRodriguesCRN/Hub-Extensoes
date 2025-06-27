@@ -5,31 +5,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const calculator = document.getElementById('calculatorSection');
 
   function hideAll() {
-    ext1.style.display = 'none';
-    shortcuts.style.display = 'none';
-    calculator.style.display = 'none';
+    ext1.classList.add('hidden');
+    shortcuts.classList.add('hidden');
+    calculator.classList.add('hidden');
   }
 
   document.getElementById('btn-audio').addEventListener('click', () => {
-    mainMenu.style.display = 'none';
+    mainMenu.classList.add('hidden');
     hideAll();
-    ext1.style.display = 'block';
+    ext1.classList.remove('hidden');
   });
 
   document.getElementById('btn-shortcuts').addEventListener('click', () => {
-    mainMenu.style.display = 'none';
+    mainMenu.classList.add('hidden');
     hideAll();
-    shortcuts.style.display = 'block';
+    shortcuts.classList.remove('hidden');
   });
 
   document.getElementById('btn-calculator').addEventListener('click', () => {
-    mainMenu.style.display = 'none';
+    mainMenu.classList.add('hidden');
     hideAll();
-    calculator.style.display = 'block';
+    calculator.classList.remove('hidden');
   });
 
-  // ✅ Novo botão para abrir site externo
+  
+
+  // Botão para abrir site externo
   document.getElementById('btn-coletores').addEventListener('click', () => {
     window.open('https://coletores-site.vercel.app/', '_blank');
+  });
+
+  // Botão de voltar reutilizável para todas as seções
+  document.querySelectorAll('.btn-voltar').forEach(button => {
+    button.addEventListener('click', (e) => {
+      // Encontra a seção pai mais próxima (que tem as divs que estamos mostrando/ocultando)
+      const currentSection = e.target.closest('#ext1, #shortcutsSection, #calculatorSection');
+      if (currentSection) {
+        currentSection.classList.add('hidden');
+      }
+      mainMenu.classList.remove('hidden');
+    });
   });
 });
