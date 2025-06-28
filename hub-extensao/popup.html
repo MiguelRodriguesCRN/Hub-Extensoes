@@ -15,7 +15,41 @@
     <button id="btn-calculator">Calculadora</button>
     <button id="btn-coletores">Coletores</button>
     <button id="btn-mvp">Baixar MVP_Verificações</button>
+    <button id="btn-csv">CSV para abonos</button>
   </div>
+
+  <!-- Extensão: CSV para Abonos -->
+  <div id="csvSection" class="ext-content hidden">
+    <div class="csv-container">
+      <div id="entries">
+        <div class="csv-entry">
+          <input type="text" class="csv-sigla1" maxlength="1" placeholder="Sigla 1">
+          <input type="text" class="csv-sigla2" maxlength="1" placeholder="Sigla 2">
+          <span>;-;</span>
+          <select class="csv-curso">
+            <option value="Direção defensiva para veículos de duas ou mais rodas">Direção defensiva para veículos de
+              duas ou mais rodas</option>
+            <!-- ...demais opções -->
+          </select>
+          <input type="text" class="csv-data" placeholder="DD/MM/AAAA" maxlength="10">
+          <input type="text" class="csv-hora-inicio" placeholder="HH:MM" maxlength="5">
+          <input type="text" class="csv-hora-fim" placeholder="HH:MM" maxlength="5">
+          <input type="text" class="csv-cpf-instrutor" placeholder="CPF Instrutor" maxlength="14">
+          <input type="text" class="csv-cpf-aluno" placeholder="CPF Aluno" maxlength="11">
+          <button class="csv-delete-btn" style="display: none;">Apagar</button>
+        </div>
+      </div>
+      <div class="csv-buttons">
+        <button id="addRow">+</button>
+        <input type="number" id="rowCount" min="1" placeholder="Nº de linhas" style="width: 80px;">
+        <button id="insertRows">Inserir</button>
+        <button id="generateCsv">Gerar .csv</button>
+        <button id="closePopup" style="display: none;">Fechar</button>
+      </div>
+      <button class="btn-voltar button">Voltar ao Menu</button>
+    </div>
+  </div>
+
 
   <!-- Extensão 1: Gravador de Áudio -->
   <div id="ext1" class="ext-content hidden">
@@ -575,6 +609,7 @@
   <script src="js/calculator.js" defer></script>
   <script src="js/nav.js" defer></script>
   <script src="js/mvp.js" defer></script>
+  <script src="js/csv.js" defer></script>
 
 
 </body>

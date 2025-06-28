@@ -210,3 +210,57 @@ input[type="time"] {
   cursor: pointer;
   width: 100%;
 }
+
+.csv-container {
+  width: 100%;
+  max-width: 900px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.csv-entry {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.csv-entry input,
+.csv-entry select {
+  padding: 6px;
+}
+
+.csv-data, .csv-cpf-instrutor, .csv-cpf-aluno {
+  width: 120px;
+}
+
+.csv-hora-inicio, .csv-hora-fim {
+  width: 70px;
+}
+
+.csv-sigla1, .csv-sigla2 {
+  width: 40px;
+}
+
+.csv-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  padding-right: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.csv-delete-btn {
+  padding: 6px 12px;
+  background-color: #800000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+.csv-delete-btn:hover {
+  background-color: #660000;
+}
