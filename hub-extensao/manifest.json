@@ -5,7 +5,8 @@
   "description": "HUB com gravador de áudio e ferramentas de cálculo/atalhos.",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Abrir HUB"
+    "default_title": "Abrir HUB",
+    "default_icon": "icons/icon.png"
   },
   "permissions": [
     "clipboardWrite",
